@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS Bin</title>
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+  article, aside, figure, footer, header, hgroup, 
+  menu, nav, section { display: block; }
+</style>
+  
+  
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" />
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+  
+</head>
+<body>
+  <h1>With out any javascript calls</h2>
+  <p>The class "active" needs to match the correct &lt;li> and the correct div.tab-pane</p>
+  <!-- only this bit is important -->
+  <ul id="main" class="nav nav-tabs">
+    <li class="active"><a href="#box-1" data-toggle="tab">Box One</a></li>
+    <li><a href="#box-2" data-toggle="tab">Box Two</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="box-1">...box one...</div>
+    <div class="tab-pane" id="box-2">...box two..</div>
+  </div>
+  <h2>How to select a different tab:</h2>
+  <ul id="main2" class="nav nav-tabs">
+    <li><a href="#box-3" data-toggle="tab">Box Three</a></li>
+    <li class="active"><a href="#box-4" data-toggle="tab">Box Four</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane" id="box-3">...box three...</div>
+    <div class="tab-pane active" id="box-4">...box four..</div>
+  </div>
+  <h2>Using a dropdown</h2>
+  <ul id="main3" class="nav nav-tabs">
+    <li class="active"><a href="#box-5" data-toggle="tab">Box Five</a></li>
+    <li><a href="#box-6" data-toggle="tab">Box Six</a></li>
+    <li class="dropdown">
+      <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        Dropdown
+        <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#box-7" data-toggle="tab">Box Seven</a></li>
+        <li><a href="#box-8" data-toggle="tab">Box Eight</a></li>
+      </ul>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="box-5">...box five...</div>
+    <div class="tab-pane" id="box-6">...box six..</div>
+    <div class="tab-pane" id="box-7">...box seven..</div>
+    <div class="tab-pane" id="box-8">...box eight..</div>
+  </div>
+  <hr />
+  <p>So I would suggest just using the data-toggle attributes and double checking you do not have duplicated IDs in your mark up. If you have more that one #ID that you are targetting it will either fail or behave strangely!
+</body>
+</html>

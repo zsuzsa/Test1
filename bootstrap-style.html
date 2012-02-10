@@ -1,0 +1,218 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+</head>
+<body>
+
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<a class="brand" href="#">
+				Bootstrap Style Page
+			</a>
+			<div class="nav-collapse"> <!-- .nav, .navbar-search, .navbar-form, etc -->
+				<ul class="nav pull-left">
+					<li class="active">
+						<a href="#">Article</a>
+					</li>
+					<li><a href="#">Talk</a></li>
+				</ul>
+				
+				<form class="navbar-search pull-right">
+					<input type="text" class="search-query" placeholder="Search">
+				</form>
+				<ul class="nav pull-right">
+					<li><a href="#">Read</a></li>
+					<li><a href="#">Edit</a></li>
+					<li><a href="#">View history</a></li>
+				</ul>
+				
+			</div>
+
+			    
+			</div>
+		</div>
+    </div>
+
+<div class="container-fluid" style="background-color: yellow;">
+		<div class="row-fluid" style="background-color: green;">
+			<div class="span2" style="background-color: red; padding-left:10px;">
+			<!--Sidebar content-->
+			    Main page <br/>
+				Contents <br/>
+				Featured content <br/>
+				Current events <br/>
+				Random article <br/>
+				Donate to Wikipedia <br/>
+<br/>
+				Interaction <br/>
+<br/>
+				Help <br/>
+				About Wikipedia <br/>
+				Community portal <br/>
+				Recent changes <br/>
+				Contact Wikipedia <br/>
+<br/>
+				Toolbox <br/>
+				Print/export <br/>
+				Languages <br/>
+<br/>
+				Català<br/>
+				Cesky<br/>
+				Deutsch<br/>
+				Español<br/>
+				Euskara<br/>
+				Français<br/>
+				Bahasa Indonesia<br/>
+				Italiano<br/>
+				Magyar<br/>
+				Nederlands<br/>
+				Norsk<br/>
+				Polski<br/>
+				Português<br/>
+				Româna<br/>
+				Slovencina<br/>
+				Suomi<br/>
+				Svenska<br/>
+				Tieng Viet
+
+
+			</div>
+			<div class="span9" style="background-color: orange; padding:10px;">
+			<!--Body content-->
+
+			jQuery
+			From Wikipedia, the free encyclopedia
+			jQuery JQuery logo.svg
+			Original author(s) 	John Resig
+			Developer(s) 	jQuery Team
+			Initial release 	August 26, 2006
+			Stable release 	1.7.1 / November 21, 2011; 2 months ago
+			Development status 	Active
+			Written in 	JavaScript
+			Size 	31 KB zipped / 91.6 KB (production mode) / 229 KB (development mode)
+			Type 	JavaScript library
+			License 	Dual license:
+			GNU GPL or MIT
+			Website 	jquery.com
+
+			jQuery is a cross-browser JavaScript library designed to simplify the client-side scripting of HTML.[1] It was released in January 2006 at BarCamp NYC by John Resig. Used by over 52% of the 10,000 most visited websites, jQuery is the most popular JavaScript library in use today.[2][3]
+
+			jQuery is free, open source software, dual-licensed under the MIT License or the GNU General Public License, Version 2.[4] jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, theme-able widgets. The modular approach to the jQuery library allows the creation of powerful and dynamic web pages and web applications.
+
+			Microsoft and Nokia have announced plans to bundle jQuery on their platforms,[5] Microsoft is adopting it initially within Visual Studio[6] for use within Microsoft's ASP.NET AJAX framework and ASP.NET MVC Framework while Nokia has integrated it into their Web Run-Time widget development platform.[7] jQuery has also been used in MediaWiki since version 1.16.[8]
+			Contents
+			 [hide] 
+
+				1 Etymology
+				2 Features
+				3 Including the library
+				4 Usage styles
+				5 jQuery plug-ins
+				6 Release history
+				7 Testing framework
+				8 See also
+				9 References
+				10 Further reading
+				11 External links
+
+			[edit] Etymology
+
+			The use of the name jQuery is somewhat misleading, as the library has little to do with queries. Shortly after its release in January 2006, author John Resig stated, "I was, originally, going to use JSelect, but all the domain names were taken already."[9]
+			[edit] Features
+
+			jQuery contains the following features:
+
+				DOM element selections using the cross-browser open source selector engine Sizzle, a spin-off out of the jQuery project[10]
+				DOM traversal and modification (including support for CSS 1-3)
+				Events
+				CSS manipulation
+				Effects and animations
+				Ajax
+				Extensibility through plug-ins
+				Utilities - such as user agent information, feature detection
+				Compatibility methods that are natively available in modern browsers but need fallbacks for older ones - For example the inArray() and each() functions.
+				Cross-browser support
+
+			[edit] Including the library
+
+			The jQuery library is a single JavaScript file, containing all of its common DOM, event, effects, and Ajax functions. It can be included within a web page by linking to a local copy, or to one of the many copies available from public servers. jQuery has a CDN sponsored by Media Temple[11] (previously at Amazon[12]). Additionally Google [13] and Microsoft host it as well.
+
+			<script type="text/javascript" src="jquery.js"></script>
+
+			The most popular and basic way to introduce a jQuery function is to use the .ready() function.
+
+			$(document).ready(function() {
+			// jquery goes here
+			});
+
+			or the shortcut
+
+			$(function() {
+			// jquery goes here
+			});
+
+			[edit] Usage styles
+
+			jQuery has two usage styles:
+
+				via the $ function, which is a factory method for the jQuery object. These functions, often called commands, are chainable (They all return jQuery objects, for details please see method chaining)
+				via $.-prefixed functions. These are utility functions which do not work on the jQuery object per se.
+
+			Typically, access to and manipulation of multiple DOM nodes begins with the $ function being called with a CSS selector string, which results in a jQuery object referencing matching elements in the HTML page. This node set can be manipulated by calling instance methods on the jQuery object, or on the nodes themselves. For example:
+
+			$("div.test").add("p.quote").addClass("blue").slideDown("slow");
+
+			This line finds the union of all div tags with class attribute test and all p tags with CSS class attribute quote, adds the class attribute blue to each matched element, and then slides them down with an animation. The $ and add functions affect the matched set, while the addClass and slideDown affect the referenced nodes.
+
+			The following script automatically checks whether the jQuery file is included. If not, it appends a jquery reference to the head section
+
+			if(!(window.jQuery && window.jQuery.fn.jquery == '1.6.2')) {
+			  var s = document.createElement('script');
+			  s.setAttribute('src', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js');
+			  s.setAttribute('type', 'text/javascript');
+			  document.getElementsByTagName('head')[0].appendChild(s);
+			}
+
+			The methods prefixed with $. are convenience methods or affect global properties and behaviour. For example, the following is an example of the map function called each in jQuery:
+
+			$.each([1,2,3], function(){
+			  document.write(this + 1);
+			});
+
+			This writes "234" to the document.
+
+			It is possible to perform browser-independent Ajax queries using $.ajax and associated methods to load and manipulate remote data.
+
+			$.ajax({
+			  type: "POST",
+			  url: "example.php",
+			  data: "name=John&location=Boston",
+			  success: function(msg){
+				alert( "Data Saved: " + msg );
+			  }
+			});
+
+			This example posts the data name=John and location=Boston to example.php on the server. When this request finishes successfully, the success function is called to alert the user.
+			[edit] jQuery plug-ins
+
+			Because of jQuery's architecture, other developers can use its constructs to create plug-in code to extend its functionality. Currently there are thousands of jQuery plug-ins available on the web[14] that cover a wide range of functionality such as Ajax helpers, webservices, datagrids, dynamic lists, XML and XSLT tools, drag and drop, events, cookie handling, modal windows, even a jQuery-based Commodore 64 emulator.[15]
+
+			An important source of jQuery plug-ins is the Plugins sub-domain of the jQuery Project website.[14] There are alternative plug-in search engines[16] that take more specialist approaches, such as listing only plug-ins that meet certain criteria (e.g. those that have a public code repository). The tutorials page on the jQuery site has a list of links to jQuery plug-in tutorials under the "Plugin development" section.[17]
+						
+			</div>
+		</div>
+		<div style="background-color: blue; font-weight: bold; font-size: 16; text-align: center; height: 28px;">
+			Footer
+		</div>
+    </div>
+	
+
+</body>
+</html>
